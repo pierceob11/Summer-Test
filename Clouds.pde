@@ -12,7 +12,7 @@ boolean resetClouds;
    CloudY = height / 3;
    CHeight = 40;
    CWidth = 80;
-   CSpeed = 4;
+   CSpeed = random(0.4, 3);
    resetClouds = false;
   }
   

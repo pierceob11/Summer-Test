@@ -4,12 +4,20 @@ float CHeight, CWidth;
 float CSpeed;
 boolean resetCloud;
 Clouds clouds;
+Clouds2 clouds2;
+Clouds3 clouds3;
+Clouds4 clouds4;
+Clouds5 clouds5;
 
 void setup()
 {
   size(600, 600);
   halfHeight = height / 2;
   clouds = new Clouds();
+  clouds2 = new Clouds2();
+  clouds3 = new Clouds3();
+  clouds4 = new Clouds4();
+  clouds5 = new Clouds5();
 }
 
 void draw()
@@ -17,6 +25,18 @@ void draw()
   skybox();
   clouds.update();
   clouds.render();
+  
+  clouds2.update();
+  clouds2.render();
+  
+  clouds3.update();
+  clouds3.render();
+  
+  clouds4.update();
+  clouds4.render();
+  
+  clouds5.update();
+  clouds5.render();
 }
 
 void skybox()
