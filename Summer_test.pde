@@ -8,6 +8,7 @@ Clouds2 clouds2;
 Clouds3 clouds3;
 Clouds4 clouds4;
 Clouds5 clouds5;
+Plane plane;
 
 void setup()
 {
@@ -18,6 +19,7 @@ void setup()
   clouds3 = new Clouds3();
   clouds4 = new Clouds4();
   clouds5 = new Clouds5();
+  plane = new Plane();
 }
 
 void draw()
@@ -37,6 +39,9 @@ void draw()
   
   clouds5.update();
   clouds5.render();
+  
+  plane.update();
+  plane.render();
 }
 
 void skybox()
