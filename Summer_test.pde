@@ -3,12 +3,14 @@ float CloudX, CloudY;
 float CHeight, CWidth;
 float CSpeed;
 boolean resetCloud;
+boolean keys[];
 Clouds clouds;
 Clouds2 clouds2;
 Clouds3 clouds3;
 Clouds4 clouds4;
 Clouds5 clouds5;
 Plane plane;
+Person person;
 
 void setup()
 {
@@ -20,6 +22,12 @@ void setup()
   clouds4 = new Clouds4();
   clouds5 = new Clouds5();
   plane = new Plane();
+  person = new Person();
+  keys = new boolean[4];
+  keys[0] = false; //Up
+  keys[1] = false; //Down
+  keys[2] = false; //Left
+  keys[3] = false; //Right
 }
 
 void draw()
@@ -42,6 +50,9 @@ void draw()
   
   plane.update();
   plane.render();
+  
+  person.render();
+  person.update();
   
 }
 

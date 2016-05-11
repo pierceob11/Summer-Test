@@ -47,6 +47,11 @@ class Plane
     {
       dropSpeed = 0;
     }
+    if(resetPlane == true)
+    {
+      BoxX = PBodyX;
+      BoxY = PBodyY;
+    }
   }
   
   void render()
