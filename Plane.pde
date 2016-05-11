@@ -6,6 +6,8 @@ class Plane
   float PWingX, PWingY;
   float PSpeed;
   boolean resetPlane;
+  float BoxX, BoxY;
+  float dropSpeed;
   
   Plane()
   {
@@ -15,6 +17,9 @@ class Plane
     PBodyH = 35;
     PSpeed = 3;
     resetPlane = false;
+    BoxX = PBodyX;
+    BoxY = PBodyY;
+    dropSpeed = 7;
   }
   
   void update()
@@ -31,6 +36,16 @@ class Plane
     if(PBodyX < 598)
     {
       resetPlane = false;
+    }
+    if(key == ' ')
+    {
+      fill(255, 0, 0);
+      rect(BoxX, BoxY, 20, 20);
+      BoxY += dropSpeed;
+    }
+    if(BoxY >= random(450, 590))
+    {
+      dropSpeed = 0;
     }
   }
   

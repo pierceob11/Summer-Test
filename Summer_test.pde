@@ -42,6 +42,7 @@ void draw()
   
   plane.update();
   plane.render();
+  
 }
 
 void skybox()
